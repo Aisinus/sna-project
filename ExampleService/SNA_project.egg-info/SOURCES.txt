@@ -1,0 +1,6 @@
+setup.py
+SNA_project.egg-info/PKG-INFO
+SNA_project.egg-info/SOURCES.txt
+SNA_project.egg-info/dependency_links.txt
+SNA_project.egg-info/requires.txt
+SNA_project.egg-info/top_level.txt
