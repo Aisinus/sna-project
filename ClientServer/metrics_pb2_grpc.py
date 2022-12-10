@@ -2,10 +2,10 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import ProtoFile_pb2 as ProtoFile__pb2
+import metrics_pb2 as metrics__pb2
 
 
-class ClientMetricServiceStub(object):
+class MetricsServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -14,42 +14,42 @@ class ClientMetricServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.SendMetric = channel.unary_unary(
-                '/ClientMetricService/SendMetric',
-                request_serializer=ProtoFile__pb2.Metric.SerializeToString,
-                response_deserializer=ProtoFile__pb2.Empty.FromString,
+        self.sendMetrics = channel.unary_unary(
+                '/MetricsService/sendMetrics',
+                request_serializer=metrics__pb2.MetricsMessage.SerializeToString,
+                response_deserializer=metrics__pb2.Empty.FromString,
                 )
 
 
-class ClientMetricServiceServicer(object):
+class MetricsServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def SendMetric(self, request, context):
+    def sendMetrics(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
 
-def add_ClientMetricServiceServicer_to_server(servicer, server):
+def add_MetricsServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'SendMetric': grpc.unary_unary_rpc_method_handler(
-                    servicer.SendMetric,
-                    request_deserializer=ProtoFile__pb2.Metric.FromString,
-                    response_serializer=ProtoFile__pb2.Empty.SerializeToString,
+            'sendMetrics': grpc.unary_unary_rpc_method_handler(
+                    servicer.sendMetrics,
+                    request_deserializer=metrics__pb2.MetricsMessage.FromString,
+                    response_serializer=metrics__pb2.Empty.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'ClientMetricService', rpc_method_handlers)
+            'MetricsService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class ClientMetricService(object):
+class MetricsService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def SendMetric(request,
+    def sendMetrics(request,
             target,
             options=(),
             channel_credentials=None,
@@ -59,8 +59,8 @@ class ClientMetricService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ClientMetricService/SendMetric',
-            ProtoFile__pb2.Metric.SerializeToString,
-            ProtoFile__pb2.Empty.FromString,
+        return grpc.experimental.unary_unary(request, target, '/MetricsService/sendMetrics',
+            metrics__pb2.MetricsMessage.SerializeToString,
+            metrics__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

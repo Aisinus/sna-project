@@ -3,14 +3,15 @@ import socket
 import psutil
 import time
 import grpc
-import ProtoFile_pb2 as pb2
-import ProtoFile_pb2_grpc as pb2_grpc
+import metrics_pb2 as pb2
+import metrics_pb2_grpc as pb2_grpc
 
 hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)
-address = 'localhost:5505'
+with open('LoadBalancerAddress.txt', 'r') as file:
+    address = file.read()
 channel = grpc.insecure_channel(address)
-stub = pb2_grpc.ClientMetricServiceStub(channel)
+stub = pb2_grpc.MetricsServiceStub(channel)
 
 
 def get_info():
@@ -18,11 +19,12 @@ def get_info():
 
 
 try:
+    print(address)
     while True:
         cpu, ram = get_info()
         time_current = int(time.time())
-        message = pb2.Metric(cpu=cpu, ram=ram, timestamp=time_current, ip=ip)
-        stub.SendMetric(message)
+        message = pb2.MetricsMessage(cpu=cpu, ram=ram, timestamp=time_current, address=ip)
+        stub.sendMetrics(message)
 except KeyboardInterrupt:
     print("shutting down")
     sys.exit()
