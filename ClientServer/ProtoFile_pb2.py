@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fProtoFile.proto\"\"\n\x06Metric\x12\x0b\n\x03\x63pu\x18\x01 \x01(\x02\x12\x0b\n\x03ram\x18\x02 \x01(\x02\"\x07\n\x05\x45mpty24\n\x13\x43lientMetricService\x12\x1d\n\nSendMetric\x12\x07.Metric\x1a\x06.Emptyb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fProtoFile.proto\"A\n\x06Metric\x12\x0b\n\x03\x63pu\x18\x01 \x01(\x02\x12\x0b\n\x03ram\x18\x02 \x01(\x02\x12\x11\n\ttimestamp\x18\x03 \x01(\x03\x12\n\n\x02ip\x18\x04 \x01(\t\"\x07\n\x05\x45mpty24\n\x13\x43lientMetricService\x12\x1d\n\nSendMetric\x12\x07.Metric\x1a\x06.Emptyb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ProtoFile_pb2', globals())
@@ -21,9 +21,9 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   _METRIC._serialized_start=19
-  _METRIC._serialized_end=53
-  _EMPTY._serialized_start=55
-  _EMPTY._serialized_end=62
-  _CLIENTMETRICSERVICE._serialized_start=64
-  _CLIENTMETRICSERVICE._serialized_end=116
+  _METRIC._serialized_end=84
+  _EMPTY._serialized_start=86
+  _EMPTY._serialized_end=93
+  _CLIENTMETRICSERVICE._serialized_start=95
+  _CLIENTMETRICSERVICE._serialized_end=147
 # @@protoc_insertion_point(module_scope)

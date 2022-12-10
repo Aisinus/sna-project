@@ -5,9 +5,10 @@ service ClientMetricService {
 }
 
 message Metric{
-    float cpu = 1string ip;
+    float cpu = 1;
     float ram = 2;
-
+    int64 timestamp = 3;
+    string ip = 4;
 }
 
 message Empty{}

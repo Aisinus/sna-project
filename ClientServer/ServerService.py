@@ -13,9 +13,10 @@ class ClientMetric(pb2_grpc.ClientMetricServiceServicer):
 
     def SendMetric(self, request, context):
         try:
-            print(f'{request.cpu} {request.ram} {context.peer()}')
+            clients[request.ip] = [request.cpu, request.ram, request.timestamp]
         except Exception as ex:
             print(f'error {ex}')
+        print(clients)
         return pb2.Empty()
 
 
