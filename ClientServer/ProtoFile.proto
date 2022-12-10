@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service ClientMetricService {
+    rpc SendMetric(Metric) returns (Empty);
+}
+
+message Metric{
+    float cpu = 1string ip;
+    float ram = 2;
+
+}
+
+message Empty{}
