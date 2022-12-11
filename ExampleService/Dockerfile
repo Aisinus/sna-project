@@ -1,11 +1,11 @@
-FROM python:3.10
+FROM python:3.9
 
-ENV PYTHONNUNBUFFERED 1
+WORKDIR /code
 
-EXPOSE 8000
+COPY requirements.txt .
 
-WORKDIR /app
+RUN pip install -r requirements.txt
 
-COPY . /app
+COPY app/ .
 
-RUN pip install -e .
+CMD [ "python", "./main.py" ]
