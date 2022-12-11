@@ -1,9 +1,10 @@
-#!bin/bash
+#!/bin/bash
 
 cd ExampleService/ 
-docker build -t myimage .
+sudo docker build -t myimage .
 docker run -d -p 80:20500 myimage
 cd ../
 cd ClientServer/
 pip install -r requirements.txt
-python src/ClientService.py
+cd src/
+python3 ClientService.py
