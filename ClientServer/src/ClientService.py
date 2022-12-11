@@ -21,10 +21,13 @@ def get_info():
 try:
     print(ip)
     while True:
-        cpu, ram = get_info()
-        time_current = int(time.time())
-        message = pb2.MetricsMessage(cpu=cpu, ram=ram, timestamp=time_current, address=ip)
-        stub.sendMetrics(message)
+        try:
+            cpu, ram = get_info()
+            time_current = int(time.time())
+            message = pb2.MetricsMessage(cpu=cpu, ram=ram, timestamp=time_current, address=ip)
+            stub.sendMetrics(message)
+        except Exception:
+            continue
 except KeyboardInterrupt:
     print("shutting down")
     sys.exit()
