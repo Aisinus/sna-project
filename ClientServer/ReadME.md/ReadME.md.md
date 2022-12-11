@@ -1,0 +1,2 @@
+**Before running this script you must run load-balancer on the main machine which will distribute the requests.** After running load-balancer on another machine you can proceed to install this script :
+1. 
