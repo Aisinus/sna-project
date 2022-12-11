@@ -49,5 +49,5 @@ if __name__ == "__main__":
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
     print(ip)
-    uvicorn.run(app, host="127.0.0.1", port=20500)
-    # uvicorn.run(app, host="0.0.0.0", port=20500)  # For Docker
+    #uvicorn.run(app, host="127.0.0.1", port=20500)
+    uvicorn.run(app, host="0.0.0.0", port=20500)  # For Docker
