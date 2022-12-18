@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "dba42647e443c817",
+    "id": "78422421222e3572",
     "type": "split",
     "children": [
       {
-        "id": "817754be9053ef64",
+        "id": "6a7e680eac1e5175",
         "type": "tabs",
         "children": [
           {
-            "id": "61533d819fa59e8f",
+            "id": "e0f9a9d626f0b744",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ReadME.md.md",
+                "file": "README.md.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "76c3ae35bdec0526",
+    "id": "c4cd406f33eb47d7",
     "type": "split",
     "children": [
       {
-        "id": "451f55e81e4da402",
+        "id": "2ccd2f4aaf411d4f",
         "type": "tabs",
         "children": [
           {
-            "id": "f2bb0f34b30336ef",
+            "id": "3ec0c3a44dd66db5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "b9216ba47f068a40",
+            "id": "0287b1fdbb4fd4bd",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "b47bc117170a5b02",
+            "id": "1788d829ceb05220",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -69,23 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
-    "id": "fcfce39a523e2f2a",
+    "id": "2144e4e67d95f83c",
     "type": "split",
     "children": [
       {
-        "id": "0327b760ef5976cd",
+        "id": "2ad77f1eed601211",
         "type": "tabs",
         "children": [
           {
-            "id": "4f8aa19b072b0e79",
+            "id": "8bb5f465db857bb1",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ReadME.md.md",
+                "file": "README.md.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +97,19 @@
             }
           },
           {
-            "id": "94e73a8e6363d27a",
+            "id": "aa3b9652ea13fd69",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ReadME.md.md",
+                "file": "README.md.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "3777a35258842e99",
+            "id": "8e2d79ece4fbc4d7",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +120,12 @@
             }
           },
           {
-            "id": "314c370c4009cb3a",
+            "id": "732214b373b111ba",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "ReadME.md.md"
+                "file": "README.md.md"
               }
             }
           }
@@ -136,6 +136,6 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "61533d819fa59e8f",
+  "active": "e0f9a9d626f0b744",
   "lastOpenFiles": []
 }
